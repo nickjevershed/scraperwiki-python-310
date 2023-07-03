@@ -1,5 +1,15 @@
 from __future__ import absolute_import, print_function
-from collections import Iterable, Mapping, OrderedDict
+from __future__ import absolute_import, print_function
+from collections import OrderedDict
+
+# Updated for more recent python versions
+
+try:
+    # Python <= 3.9
+    from collections import Iterable, Mapping
+except ImportError:
+    # Python > 3.9
+    from collections.abc import Iterable, Mapping
 
 import atexit
 import datetime
